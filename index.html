@@ -73,14 +73,27 @@
     <p>"Their metal roofing services were top-notch. I highly recommend them!"</p> <span>- Sarah P., Factory Manager</span> 
    </div> 
   </section> <!-- Contact Section --> 
-  <section id="feedback" class="feedback"> 
-   <h2>Contact Us</h2> 
-   <form action="#"> 
-    <input type="text" name="name" placeholder="Your Name" required> 
-    <input type="email" name="email" placeholder="Your Email" required> <textarea name="message" placeholder="Your Message" required></textarea> <button type="submit" class="cta-btn">Send Message</button> 
-   </form> 
-  </section> <!-- Contact Section --> 
-  <footer> 
+  
+
+<section id="feedback" class="feedback"> 
+  <h2>Contact Us</h2> 
+  <form id="contact-form" action="https://formspree.io/f/meogzbky" method="POST"> 
+    <input type="text" name="name" placeholder="Name" required> 
+    <input type="email" name="email" placeholder="Email" required> 
+    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+    <textarea name="message" placeholder="Your Message" required></textarea> 
+
+    <button type="button" id="send-otp" class="cta-btn">Send OTP</button>
+    <input type="text" id="otp" name="otp" placeholder="Generate OTP" style="display:none;" required>
+    <button type="submit" id="submit-btn" class="cta-btn" style="display:none;">Send Message</button>
+
+    <p id="thank-you">
+      Thank you! Your form has been submitted. Our team will contact you shortly.
+    </p>
+  </form>
+</section>
+
+ <footer> 
    <div id="contact" class="contact"> 
     <p>Get In Touch</p> 
     <div class="contacta"> 
