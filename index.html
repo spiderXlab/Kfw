@@ -1,119 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Kavish Fabrication</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <!doctype html>
+
 <html lang="en"> 
+
  <head> 
+
   <meta charset="UTF-8"> 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
   <title>Kavish Fabrication</title> 
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+
+  <link rel="stylesheet" href="style.css"> 
+
+  <script src="script.js"></script> 
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"> 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+
  </head> 
+
  <body> <!-- Navbar --> 
+
   <header class="navbar"> 
+
    <div class="nav-container"> 
+
     <h1 class="nav-logo">Kavish Fabrication</h1> 
+
     <nav class="nav-links"> <a href="#about">About</a> <a href="#services">Services</a> <a href="#gallery">Gallery</a> <a href="#contact">Contact</a> 
+
     </nav> 
+
    </div> 
+
   </header> <!-- About Section --> 
+
   <section id="about" class="about"> 
+
    <div class="about-container"> 
-    <h2>✫  About Kavish Fabrication</h2> 
+
+    <h2>About Kavish Fabrication</h2> 
+
     <p> Established in Surat, Gujarat Kavish Fabrication specializes in precision metal work, Structural solutions, Structure dismantle, Sheet fittings, Color works and high-quality fabrication services. </p> 
+
     <p> We are committed to customer satisfaction, timely delivery, and maintaining the highest safety and quality standards in all our projects. </p> 
-   </div>
-   
+
+   </div> 
+
   </section> <!-- Services Section --> 
+
   <section id="services" class="services"> 
+
    <h2>Our Services</h2> 
+
    <div class="services-grid"> 
+
     <div class="service-card"> <i class="fa-solid fa-industry"></i> 
+
      <h3>Structural Fabrication</h3> 
+
      <p>Custom Steel, Iron structures built to exact specifications.</p> 
+
     </div> 
+
     <div class="service-card"> <i class="fa-solid fa-wrench"></i> 
+
      <h3>M/S Dismantle</h3> 
+
      <p>Reliable on-site repair and maintenance services.</p> 
+
     </div> 
+
     <div class="service-card"> <i class="fa-solid fa-building"></i> 
+
      <h3>Shade Fabrication</h3> 
+
      <p>Metal shades for commercial or industrial needs.</p> 
+
     </div> 
-        <div class="service-card"> <i class="fa-solid fa-cogs"></i> 
+
+    <div class="service-card"> <i class="fa-solid fa-cogs"></i> 
+
      <h3>Customized Steel Structures</h3> 
+
      <p>We offer tailor-made steel structures to suit your unique business and residential needs.</p> 
+
     </div> 
+
     <div class="service-card"> <i class="fa-solid fa-fire-extinguisher"></i> 
+
      <h3>Safety Installations</h3> 
+
      <p>Protective grills, fire exits, and custom safety structures.</p> 
+
     </div> 
+
     <div class="service-card"> <i class="fa-solid fa-tools"></i> 
+
      <h3>Welding &amp; Repair</h3> 
+
      <p>Expert welding services and repair work for metal structures and frameworks.</p> 
+
     </div> 
+
    </div> 
+
   </section> <!-- Gallery Section --> 
+
   <section id="gallery" class="gallery"> 
+
    <h2>Our Work</h2> 
+
    <div class="gallery-grid"> 
+
     <img src="project1.jpg" alt="Project1"> 
+
     <img src="project2.jpg" alt="Project2"> 
+
     <img src="project3.jpg" alt="Project3"> 
-    <img src="project4.jpg" alt="Project4">
-    <img src="project5.jpg" alt="Project5">
-    <img src="project6.jpg" alt="Project6">
+
+    <img src="project4.jpg" alt="Project4"> 
+
+    <img src="project5.jpg" alt="Project5"> 
+
+    <img src="project6.jpg" alt="Project6"> 
+
    </div> 
+
   </section> 
+
   <section id="testimonials" class="testimonials"> 
+
    <h2>What Our Clients Say</h2> 
+
    <div class="testimonial"> 
+
     <p>"Kavish Fabrication delivered an exceptional steel shed for our warehouse. Professional and reliable!"</p> <span>- John D., Warehouse Owner</span> 
+
    </div> 
+
    <div class="testimonial"> 
+
     <p>"Their metal roofing services were top-notch. I highly recommend them!"</p> <span>- Sarah P., Factory Manager</span> 
+
    </div> 
+
   </section> <!-- Contact Section --> 
+
+  <section id="feedback" class="feedback"> 
+
   
-
-<section id="feedback" class="feedback"> 
-  <h2>Contact Us</h2> 
-  <form id="contact-form" action="https://formspree.io/f/meogzbky" method="POST"> 
+   <form id="contact-form" action="https://formspree.io/f/meogzbky" method="POST"> 
+<h2>Contact Us </h2>
     <input type="text" name="name" placeholder="Name" required> 
+
     <input type="email" name="email" placeholder="Email" required> 
-    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
-    <textarea name="message" placeholder="Your Message" required></textarea> 
 
-    <button type="button" id="send-otp" class="cta-btn">Generate OTP</button>
-    <input type="text" id="otp" name="otp" placeholder="Enter OTP" style="display:none;" required>
-    <button type="submit" id="submit-btn" class="cta-btn" style="display:none;">Send Message</button>
+    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required> <textarea name="message" placeholder="Your Message" required></textarea> <button type="button" id="send-otp" class="cta-btn">Generate OTP</button> 
 
-    <p id="thank-you">
-      Thank you! Your form has been submitted. Our team will contact you shortly.
-    </p>
-  </form>
-</section>
+    <input type="text" id="otp" name="otp" placeholder="Enter OTP" style="display:none;" required> <button type="submit" id="submit-btn" class="cta-btn" style="display:none;">Send Message</button> 
 
- <footer> 
+    <p id="thank-you"> Thank you! Your form has been submitted. Our team will contact you shortly. </p> 
+
+   </form> 
+
+  </section> 
+
+  <footer> 
+
    <div id="contact" class="contact"> 
+
     <p>Get In Touch</p> 
+
     <div class="contacta"> 
+
      <div class="cont"> <i class="fa-solid fa-phone" style="color: #FFD43B;"></i> <a href="tel:123860XXXX">123-860-XXXX</a> 
+
      </div> 
+
      <div class="mail"> <i class="fa-solid fa-envelope" style="color: #FFD43B;"></i> <a href="mailto:kavishfabrication@gmail.com">kavishfabrication@gmail.com</a> 
+
      </div> 
+
      <div class="add"> <i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i> <a href="https://www.google.com/maps/place/Surat,+Gujarat,+India" target="_blank">Surat, Gujarat, India</a> 
+
      </div> 
+
     </div> 
+
     <p>Social Media</p> 
+
     <div class="Social"> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="https://www.instagram.com/kavishfabrication?igsh=MXQwdW5vbGtvaXNlcg=="><i class="fa-brands fa-instagram"></i></a> 
+
     </div> 
+
    </div> 
+
    <div class="break"></div> 
+
    <div class="copy"> 
+
     <p>Copyright © 2024–2026</p> 
+
     <p>All rights reserved</p> 
+
    </div> 
-  </footer>
- </body>   
+
+  </footer> 
+
+  <script src="script.js"></script> 
+
+ </body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
 </html>
