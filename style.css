@@ -480,7 +480,7 @@ footer {
 
 .contacta div {
 
-  display: flex;
+  display: Block;
 
   align-items: center;
 
