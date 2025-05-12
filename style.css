@@ -464,39 +464,37 @@ footer {
 
 }
 
+
+
+
 .contacta {
-
-  display: block;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 30px;
-
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;     /* Center horizontally */
+  gap: 30px;               /* Space between each block */
   margin-bottom: 25px;
-
 }
 
 .contacta div {
-
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   color: #ddd;
-
+  font-size: 16px;
 }
 
 .contacta a {
-
-  color: #ddd;
-
   text-decoration: none;
-
+  color: #ddd;
 }
+
+.contacta i {
+  font-size: 18px;
+}
+
+
+
+
 
 .contacta a:hover {
 
