@@ -94,6 +94,109 @@ body {
 
 /* Prevent navbar overlap */
 
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    #gallery {
+        margin-top: 25px;
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #111;
+    }
+
+    #gallery h2 {
+      font-size: 2.5rem;
+      color: #FFD700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    #gallery h2::after {
+      content: "";
+      width: 80px;
+      height: 5px;
+      background: linear-gradient(90deg, #FFD700, #8B4513);
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .gallery-slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      height: 250px;
+      margin-top: 30px;
+    }
+
+    .photo {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      width: 90vw;
+      max-width: 220px;
+      text-align: center;
+    }
+
+    .photo.active {
+      opacity: 1;
+    }
+
+    .photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #FFD700;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.05);
+    }
+
+    .photo p {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #FFD700;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .dots {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .dots span {
+      font-size: 18px;
+      cursor: pointer;
+      color: #FFD700;
+      transition: transform 0.3s;
+    }
+
+    .dots .active-dot {
+      color: #fff;
+      transform: scale(1.3);
+    }
+
+
+
 section {
 
   scroll-margin-top: 100px;
@@ -376,7 +479,7 @@ form textarea {
 
 /* Gallery */
 
-.gallery {
+.galler {
 
   background-color: #101010;
 
@@ -386,7 +489,7 @@ form textarea {
 
 }
 
-.gallery h2 {
+.galler h2 {
 
   font-size: 32px;
 
@@ -396,7 +499,7 @@ form textarea {
 
 }
 
-.gallery-grid {
+.galler-grid {
 
   display: grid;
 
@@ -410,7 +513,7 @@ form textarea {
 
 }
 
-.gallery-grid img {
+.galler-grid img {
 
   width: 100%;
 
@@ -428,7 +531,7 @@ form textarea {
 
 }
 
-.gallery-grid img:hover {
+.galler-grid img:hover {
 
   transform: scale(1.03);
 
