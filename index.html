@@ -38,39 +38,25 @@
   </header> <!-- About Section --> 
 
 
-<section id="gallery">
-  <h2>OWNER</h2>
-  <div class="gallery-slider" id="gallerySlider">
-    <div class="photo fade">
-      <img src="ajay.jpg" alt="ajay">
-      <p>Mr. Ajay Patel – Founder</p>
-    </div>
-    <div class="photo fade">
-      <img src="ravish.jpg" alt="ravish">
-      <p>Mr. Ravish Singh – Co-Founder</p>
-    </div>
-    <div class="photo fade">
-      <img src="kavish.jpg" alt="kavish">
-      <p>Mr. Kavish Singh – Director</p>
-    </div>
-  </div>
-  <div id="dotsContainer" class="dots"></div>
-</section>
-
-  
-
-  <section id="about" class="about"> 
-
-   <div class="about-container"> 
-
-    <h2>About Kavish Fabrication</h2> 
-
-    <p> Established in Surat, Gujarat Kavish Fabrication specializes in precision metal work, Structural solutions, Structure dismantle, Sheet fittings, Color works and high-quality fabrication services. </p> 
-
-    <p> We are committed to customer satisfaction, timely delivery, and maintaining the highest safety and quality standards in all our projects. </p> 
-
+<section id="about"> 
+   <h2>About US</h2> 
+   <div class="about-slider" id="aboutSlider"> 
+    <div class="photo fade"> 
+     <img src="ajay.jpg" alt="ajay"> 
+     <p>Mr. Ajay Patel – Founder</p> 
+    </div> 
+    <div class="photo fade"> 
+     <img src="ravish.jpg" alt="ravish"> 
+     <p>Mr. Ravish Singh – Co-Founder</p> 
+    </div> 
+    <div class="photo fade"> 
+     <img src="kavish.jpg" alt="kavish"> 
+     <p>Mr. Kavish Singh – Director</p> 
+    </div> 
    </div> 
-
+   <div id="dotsContainer" class="dots"></div> 
+   <p> Established in Surat, Gujarat Kavish Fabrication specializes in precision metal work, Structural solutions, Structure dismantle, Sheet fittings, Color works and high-quality fabrication services. </p> 
+   <p> We are committed to customer satisfaction, timely delivery, and maintaining the highest safety and quality standards in all our projects. </p> 
   </section> <!-- Services Section --> 
 
   <section id="services" class="services"> 
@@ -147,11 +133,11 @@
 
   </section> <!-- Gallery Section --> 
 
-  <section id="galler" class="galler"> 
+  <section id="gallery" class="galler"> 
 
    <h2>Gallery</h2> 
 
-   <div class="galler-grid"> 
+   <div class="gallery-grid"> 
 
     <img src="project1.jpg" alt="Project1"> 
 
@@ -297,7 +283,7 @@
 
     <script>
 
-     const form = document.getElementById("contact-form");
+       const form = document.getElementById("contact-form");
 const thankYou = document.getElementById("thank-you");
 const sendOTPBtn = document.getElementById("send-otp");
 const otpField = document.getElementById("otp");
@@ -347,86 +333,6 @@ form.addEventListener("submit", function (e) {
     alert("Error: " + error);
   });
 
-
-     const slider = document.getElementById('gallerySlider');
-  const slides = slider.querySelectorAll('.photo');
-  const dotsContainer = document.getElementById('dotsContainer');
-  let currentIndex = 0;
-  let interval;
-
-  function createDots() {
-    slides.forEach((_, index) => {
-      const dot = document.createElement('span');
-      dot.textContent = index === 0 ? '●' : '○';
-      dot.addEventListener('click', () => {
-        goToSlide(index);
-      });
-      dotsContainer.appendChild(dot);
-    });
-  }
-
-  function updateDots(index) {
-    const dots = dotsContainer.querySelectorAll('span');
-    dots.forEach((dot, i) => {
-      dot.textContent = i === index ? '●' : '○';
-      dot.classList.toggle('active-dot', i === index);
-    });
-  }
-
-  function goToSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-
-    currentIndex = index;
-    updateDots(currentIndex);
-  }
-
-  function startAutoSlide() {
-    interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      goToSlide(currentIndex);
-    }, 5000);
-  }
-
-  // Swipe control
-  let startX = 0;
-  slider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  slider.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) {
-      currentIndex = (currentIndex + 1) % slides.length;
-    } else if (endX - startX > 50) {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    }
-    goToSlide(currentIndex);
-  });
-
-  // Keyboard control
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') {
-      currentIndex = (currentIndex + 1) % slides.length;
-      goToSlide(currentIndex);
-    } else if (e.key === 'ArrowLeft') {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      goToSlide(currentIndex);
-    }
-  });
-
-  function initGallery() {
-    slides[0].classList.add('active');
-    createDots();
-    updateDots(0);
-    startAutoSlide();
-  }
-
-  window.addEventListener('load', initGallery);
 
 
 
