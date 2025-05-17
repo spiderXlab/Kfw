@@ -92,46 +92,50 @@ body {
 
 }
 
-/* Prevent navbar overlap */
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
+section {
 
-    #gallery {
-        margin-top: 25px;
+  scroll-margin-top: 20px;
+
+}
+
+/* About */
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+
+    #about {
+      margin-top: 25px;
       padding: 40px 20px;
       text-align: center;
-      background-color: #111;
+      background-color: #1a1a1a;
     }
 
-    #gallery h2 {
-      font-size: 2.5rem;
-      color: #FFD700;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-      position: relative;
-      display: inline-block;
-    }
+    #about h2 {
+   
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #f5ba41;
 
-    #gallery h2::after {
-      content: "";
-      width: 80px;
-      height: 5px;
-      background: linear-gradient(90deg, #FFD700, #8B4513);
-      position: absolute;
-      left: 50%;
-      bottom: -10px;
-      transform: translateX(-50%);
-      border-radius: 3px;
-    }
+}
 
-    .gallery-slider {
+.about p {
+
+  max-width: 800px;
+ margin: 0 auto 20px;
+  font-size: 16px;
+  color: #ccc;
+
+}
+
+
+    .about-slider {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -191,61 +195,16 @@ body {
     }
 
     .dots .active-dot {
-      color: #fff;
+      color: #FFD700;
       transform: scale(1.3);
-    }
-
-
-/*
-section {
-
-  scroll-margin-top: 100px;
-
-}
-*/
-/* About */
-
-.about {
-
-  background-color: #1a1a1a;
-
-  padding: 80px 20px;
-
-  margin-top: 25px;
-
-  text-align: center;
-
-}
-
-.about h2 {
-
-  font-size: 32px;
-
-  margin-bottom: 30px;
-
-  color: #f5ba41;
-
-}
-
-.about p {
-
-  max-width: 800px;
-
-  margin: 0 auto 20px;
-
-  font-size: 16px;
-
-  color: #ccc;
-
-}
-
+      }
 /* Services */
 
 .services {
 
   background-color: #121212;
 
-  padding: 80px 20px;
+  padding: 40px 20px;
 
   text-align: center;
 
@@ -479,17 +438,17 @@ form textarea {
 
 /* Gallery */
 
-.galler {
+.gallery {
 
   background-color: #101010;
 
-  padding: 80px 20px;
+  padding: 40px 20px;
 
   text-align: center;
 
 }
 
-.galler h2 {
+.gallery h2 {
 
   font-size: 32px;
 
@@ -499,7 +458,7 @@ form textarea {
 
 }
 
-.galler-grid {
+.gallery-grid {
 
   display: grid;
 
@@ -513,7 +472,7 @@ form textarea {
 
 }
 
-.galler-grid img {
+.gallery-grid img {
 
   width: 100%;
 
@@ -531,7 +490,7 @@ form textarea {
 
 }
 
-.galler-grid img:hover {
+.gallery-grid img:hover {
 
   transform: scale(1.03);
 
