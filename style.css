@@ -124,6 +124,7 @@ body {
 }
 
 .about-text p {
+  margin-top: 10px;
   max-width: 800px;
   margin: 0 auto 25px;
   font-size: 17px;
@@ -178,7 +179,7 @@ body {
 }
 
 .dots {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 12px;
