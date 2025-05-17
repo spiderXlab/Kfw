@@ -111,7 +111,7 @@ body {
 
 
     #about {
-      margin-top: 25px;
+      margin-top: 50px;
       padding: 40px 20px;
       text-align: center;
       background-color: #1a1a1a;
@@ -204,7 +204,7 @@ body {
 
   background-color: #121212;
 
-  padding: 40px 20px;
+  padding: 80px 20px;
 
   text-align: center;
 
@@ -338,7 +338,7 @@ body {
 
   text-align: center;
 
-  padding: 40px 20px;
+  padding: 80px 20px;
 
   background-color: #101010;
 
@@ -442,7 +442,7 @@ form textarea {
 
   background-color: #101010;
 
-  padding: 40px 20px;
+  padding: 80px 20px;
 
   text-align: center;
 
