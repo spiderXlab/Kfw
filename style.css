@@ -28,6 +28,23 @@ body {
 
 }
 
+   #custom-language-switcher {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 10000;
+      display: flex;
+      gap: 8px;
+    }
+    #custom-language-switcher button {
+      background: #FFD43B;
+      border: none;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
 /* Navbar */
 
 .navbar {
