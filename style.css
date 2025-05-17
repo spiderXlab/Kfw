@@ -123,8 +123,12 @@ body {
   letter-spacing: 1px;
 }
 
-.about-text p {
+. about-text{
   margin-top: 10px;
+}
+
+.about-text p {
+ 
   max-width: 800px;
   margin: 0 auto 25px;
   font-size: 17px;
