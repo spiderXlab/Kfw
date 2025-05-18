@@ -294,6 +294,7 @@ section {
   .testimonials {
 
     text-align: center;
+   margin-top: 40px;
   
 
   }
@@ -312,7 +313,7 @@ section {
 
   margin: 20px auto;
 
-  width: 95%;
+  width: 90%;
 
   background-color: #2c2c2c;
 
@@ -881,13 +882,7 @@ footer {
     </div> 
 
    </div> 
-   <div id="custom-language-switcher">
-    <button onclick="translateLanguage('en')">English</button>
-    <button onclick="translateLanguage('hi')">Hindi</button>
-    <button onclick="translateLanguage('gu')">Gujarati</button>
-  </div>  <div id="google_translate_element" style="display: none;"></div>
-
-
+   
    <div class="break"></div> 
 
    <div class="copy"> 
@@ -905,22 +900,7 @@ footer {
     <script>
 
 
-     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,hi,gu',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-
-    function translateLanguage(lang) {
-      const select = document.querySelector("select.goog-te-combo");
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event("change"));
-      }
-    }
-
+     
      const slider = document.getElementById('aboutSlider');
   const slides = slider.querySelectorAll('.photo');
   const dotsContainer = document.getElementById('dotsContainer');
@@ -1056,8 +1036,8 @@ form.addEventListener("submit", function (e) {
 
      
 });
-    </script>  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-   
+    </script> 
+ 
  </body>
 
 </html>
