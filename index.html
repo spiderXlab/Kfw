@@ -628,23 +628,31 @@ footer {
 
 
   .visitor-counter-box {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 9999;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
   }
 
   .visitor-label {
-    color: #ffffffcc;
-    font-size: 14px;
-    margin-bottom: 5px;
+
+ 
     padding-left: 2px;
-    font-weight: 500;
+   font-size: 30px;
+  margin-bottom: 20px;
+  color: #f5ba41;
+  letter-spacing: 1px;
   }
+
+
+/* .visitor-label h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #f5ba41;
+  letter-spacing: 1px;
+}*/
+
 
   .visitor-counter {
     display: flex;
@@ -655,7 +663,7 @@ footer {
     width: 40px;
     height: 40px;
     background-color: #1e1e1e;
-    color: #00ffcc;
+    color: white;
     font-size: 1.4rem;
     font-weight: bold;
     display: flex;
@@ -663,12 +671,21 @@ footer {
     justify-content: center;
     border: 1px solid #333;
     border-radius: 4px;
-    box-shadow: inset 0 0 4px #00ffcc;
+    animation: glowPulse 2s infinite;
+    box-shadow: inset 0 0 4px var(--glow);
+    transition: all 0.3s ease;
   }
 
-  .digit:first-child {
-    color: #ffff66;
-    box-shadow: inset 0 0 4px #ffff66;
+  .digit:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+    cursor: default;
+  }
+
+  @keyframes glowPulse {
+    0%   { box-shadow: 0 0 5px var(--glow), inset 0 0 5px var(--glow); }
+    50%  { box-shadow: 0 0 15px var(--glow), inset 0 0 10px var(--glow); }
+    100% { box-shadow: 0 0 5px var(--glow), inset 0 0 5px var(--glow); }
   }
 
   @media (max-width: 600px) {
@@ -681,10 +698,7 @@ footer {
     .visitor-label {
       font-size: 12px;
     }
-  }
-
-
-
+ }
  
   
 
@@ -961,19 +975,32 @@ footer {
 </p>
   
    </div> 
-
-   <div class="visitor-counter-box">
-  <div class="visitor-label">Our Visitor</div>
-  <div class="visitor-counter" id="visitorCounter">
-    <div class="digit">0</div>
-    <div class="digit">1</div>
-    <div class="digit">0</div>
-    <div class="digit">5</div>
-    <div class="digit">7</div>
-    <div class="digit">3</div>
-  </div>
-</div>
-
+<div class="visitor-counter-box"> 
+   <div class="visitor-label">
+   <h2>Our Visitors </h2>
+   </div> 
+   <div class="visitor-counter" id="visitorCounter"> 
+    <div class="digit" style="--glow: #00ffcc;">
+     0
+    </div> 
+    <div class="digit" style="--glow: #ff00cc;">
+     1
+    </div> 
+    <div class="digit" style="--glow: #ffff66;">
+     0
+    </div> 
+    <div class="digit" style="--glow: #66ff66;">
+     5
+    </div> 
+    <div class="digit" style="--glow: #66ccff;">
+     7
+    </div> 
+    <div class="digit" style="--glow: #ff9966;">
+     3
+    </div> 
+   </div> 
+  </div> 
+   
 
   </footer>
 
@@ -1146,24 +1173,32 @@ form.addEventListener("submit", function (e) {
   });
 
 
- 
-  let fakeCount = 10573; // Start from 010573
+  // Get count from localStorage or start at 10573
+  let fakeCount = localStorage.getItem('fakeVisitorCount') 
+                  ? parseInt(localStorage.getItem('fakeVisitorCount')) 
+                  : 10573;
 
   function updateFakeVisitorCounter() {
     const increaseBy = Math.floor(Math.random() * 4) + 2; // 2 to 5
     fakeCount += increaseBy;
 
+    // Save to localStorage
+    localStorage.setItem('fakeVisitorCount', fakeCount);
+
+    // Update display
     const countStr = String(fakeCount).padStart(6, '0');
     const digits = document.querySelectorAll('#visitorCounter .digit');
-
     countStr.split('').forEach((digit, i) => {
       digits[i].textContent = digit;
     });
   }
 
+  // Initial load
   updateFakeVisitorCounter();
-  setInterval(updateFakeVisitorCounter, 120000); // every 2 minutes
-  
+
+  // Update every 2 minutes
+  setInterval(updateFakeVisitorCounter, 120000);
+
 
 });
 
